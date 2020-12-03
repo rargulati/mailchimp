@@ -59,6 +59,6 @@ defmodule Mailchimp.HTTPClient do
 
   """
   def process_request_headers(headers) do
-    [{"Authorization", "Basic #{Config.api_key!()}"} | headers]
+    [{"Authorization", "Basic: #{Config.api_key!()}"} | headers]
   end
 end
